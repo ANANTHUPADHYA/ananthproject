@@ -12,6 +12,7 @@ My Website :- [http://fileexplorerpost.xyz/](http://fileexplorerpost.xyz/)
 
 **Steps to Run**
 Backend :- export the necessary variables (DynamoDB variables)
+```
 #!/bin/bash
 export DB_AWS_ACCESS_KEY_ID=
 export DB_AWS_SECRET_ACCESS_KEY=
@@ -21,16 +22,17 @@ export S3_AWS_DEFAULT_REGION=
 export S3_TITAN_BUCKET_NAME=
 export S3_AWS_ACCESS_KEY_ID=
 export S3_AWS_SECRET_ACCESS_KEY=
-'''
-go run main.go
-'''
 
+
+go run main.go
+
+```
 Frontend :- 
 
-'''
+```
 npm install
 ng serve
-'''
+```
 
 **Project 1 :-**
 
