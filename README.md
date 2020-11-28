@@ -12,7 +12,15 @@ My Website :- [http://fileexplorerpost.xyz/](http://fileexplorerpost.xyz/)
 
 **Steps to Run**
 Backend :- export the necessary variables (DynamoDB variables)
-
+#!/bin/bash
+export DB_AWS_ACCESS_KEY_ID=
+export DB_AWS_SECRET_ACCESS_KEY=
+export DB_AWS_REGION=
+export DYNAMODB_ENDPOINT_URL=
+export S3_AWS_DEFAULT_REGION=
+export S3_TITAN_BUCKET_NAME=
+export S3_AWS_ACCESS_KEY_ID=
+export S3_AWS_SECRET_ACCESS_KEY=
 '''
 go run main.go
 '''
@@ -20,6 +28,7 @@ go run main.go
 Frontend :- 
 
 '''
+npm install
 ng serve
 '''
 
@@ -131,15 +140,13 @@ AWS provides a CDN offering called cloud front. Cloud Front can be designed to s
 
 ![](https://github.com/ANANTHUPADHYA/ananthproject/blob/master/screenshots/image19.png)
 
-![](https://github.com/ANANTHUPADHYA/ananthproject/blob/master/screenshots/image20.png)
-
 j)Criteria :- **Lambda**
 
 Points :- 5 Points
 
 I have used AWS lambda to compress the files when push event to S3 bucket occurs. This will ensure that the backup is using less of storage space. As the compressed file is only used for backup the time it takes to decompress can be ignored as we don&#39;t do any real time retrieval from this backup bucket.
 
-![](RackMultipart20201122-4-1i1iydp_html_d9cb621e0b7f87fc.png)
+![](https://github.com/ANANTHUPADHYA/ananthproject/blob/master/screenshots/image20.png)
 
 g)Criteria :- **SNS, Cloudwatch**
 
@@ -147,17 +154,15 @@ Points :- 5 Points
 
 Simple Notification Service is being used to notify the default admin/user whenever lambda function fails to compress the files. An email notification would be triggered to the user. I have created a topic and subscription. So I have configured my email address for the same.
 
-![](RackMultipart20201122-4-1i1iydp_html_dd17e679bc6b0c90.png)
-
-![](RackMultipart20201122-4-1i1iydp_html_ae4693f70bfd7e08.png)
+![](https://github.com/ANANTHUPADHYA/ananthproject/blob/master/screenshots/image21.png)
 
 Cloud Watch :
 
 I am using amazon cloud watch for metrics. My application is running on ec2 Instances and the various metrics from these instances are sent to cloudwatch which gives a neat overview on various data like CPU Utilization, Memory Consumpution, Requests coming into across time interval, Which all requests failed and what were the status code of these request/responses. My s3 bucket is also configured with cloud watch which gives me data to storage. I have also integrated my Lambda function with cloud watch which gives me real time statics.
 
-![](RackMultipart20201122-4-1i1iydp_html_8224d72d3a903f5e.png)
+![](https://github.com/ANANTHUPADHYA/ananthproject/blob/master/screenshots/image22.png)
 
-![](RackMultipart20201122-4-1i1iydp_html_2df5611264bedbe8.png)
+![](https://github.com/ANANTHUPADHYA/ananthproject/blob/master/screenshots/image23.png)
 
 g)Criteria :- **DR Measures**
 
@@ -165,11 +170,11 @@ Points :- 5 Points
 
 Building the disaster site in different region of a different geographical area allows the best use of the disaster site, so I built two buckets in two different areas, one in US East and one in Asia Pacific. The replication function of AWS S3 will help us in copying the data from the bucket of one region to other region.
 
-![](RackMultipart20201122-4-1i1iydp_html_8d5f7334edad1af9.png)
+![](https://github.com/ANANTHUPADHYA/ananthproject/blob/master/screenshots/image24.png)
 
-![](RackMultipart20201122-4-1i1iydp_html_f1211e7b749e47f3.png)
+![](https://github.com/ANANTHUPADHYA/ananthproject/blob/master/screenshots/image25.png)
 
-![](RackMultipart20201122-4-1i1iydp_html_f1211e7b749e47f3.png)
+![](https://github.com/ANANTHUPADHYA/ananthproject/blob/master/screenshots/image26.png)
 
 i)Criteria :- **High Availability Solution (Multi AZ Replication)**
 
@@ -177,7 +182,7 @@ Points :- 5 Points
 
 I have configured my aws resources/services to be highly available most of the time. I have used DynamoDB which by default is Multi AZ Enabled. The S3 bucket which I have primary and backup are in different Availability Zone. Also my EC2 instances are in different AZ&#39;s. And the ELB ensures that the traffic flows across these EC2 instances spread across different Availability Zones.
 
-![](RackMultipart20201122-4-1i1iydp_html_df38838259c49159.png)
+![](https://github.com/ANANTHUPADHYA/ananthproject/blob/master/screenshots/image27.png)
 
 j) Criteria :-**Highly Scalable (Autoscale Group)**
 
@@ -185,7 +190,7 @@ Points :- 10 Points
 
 I have enabled AutoScaling for my EC2 instances. I have specified the scale in and scale out rule based on CPU Utilization and memory consumption. This enables a highly scalable solution
 
-![](RackMultipart20201122-4-1i1iydp_html_7887a30f3183d23f.png)
+![](https://github.com/ANANTHUPADHYA/ananthproject/blob/master/screenshots/image28.png)
 
 k)Criteria :- **Version Control Github, Codestar, CodeCommit, other**
 
@@ -197,13 +202,11 @@ Frontend is written in Angular, I have created a simple front-end to talk to my 
 
 Github URL :- [https://github.com/ANANTHUPADHYA/cloud](https://github.com/ANANTHUPADHYA/cloud)
 
-![](RackMultipart20201122-4-1i1iydp_html_e88f18931b888550.png)
-
-![](RackMultipart20201122-4-1i1iydp_html_ce5edf1b7bd87fd1.png)
+![](https://github.com/ANANTHUPADHYA/ananthproject/blob/master/screenshots/image29.png)
 
 CodeCommit
 
-![](RackMultipart20201122-4-1i1iydp_html_c58f14c57d3b9ede.png)
+![](https://github.com/ANANTHUPADHYA/ananthproject/blob/master/screenshots/image30.png)
 
 l)Criteria :- **Admin Panel**
 
@@ -211,11 +214,11 @@ Points :- 10 Points
 
 Admin panel lists all the files and the details from all the users. Admin can view these files from all the users who are using the application and admin also has the capability to delete the files. A small button is displayed at the top of the screen, clicking on which an admin panel will open. The
 
-![](RackMultipart20201122-4-1i1iydp_html_9a18caee0e14112a.png)
+![](https://github.com/ANANTHUPADHYA/ananthproject/blob/master/screenshots/image31.png)
 
-![](RackMultipart20201122-4-1i1iydp_html_3586a9071ecb587.png)
+![](https://github.com/ANANTHUPADHYA/ananthproject/blob/master/screenshots/image32.png)
 
-![](RackMultipart20201122-4-1i1iydp_html_756ac28e76ca0758.png)
+![](https://github.com/ANANTHUPADHYA/ananthproject/blob/master/screenshots/image33.png)
 
 j)Criteria :- **UI, Documentation, Video, AWS Resource Config**
 
@@ -227,6 +230,6 @@ Documentation of the same is written here.
 
 AWS Resource Config
 
-![](RackMultipart20201122-4-1i1iydp_html_2b3d7418ff1c5673.png)
+![](https://github.com/ANANTHUPADHYA/ananthproject/blob/master/screenshots/image34.png)
 
 Thank you
