@@ -10,11 +10,18 @@ Create a highly available, highly scalable, cost effective 3 tier web applicatio
 
 My Website :- [http://fileexplorerpost.xyz/](http://fileexplorerpost.xyz/)
 
-**Implementation:**
+**Steps to Run**
+Backend :- export the necessary variables (DynamoDB variables)
 
-**Architecture Diagram:**
+'''
+go run main.go
+'''
 
-![](RackMultipart20201122-4-1i1iydp_html_943e789bdf6421ac.png)
+Frontend :- 
+
+'''
+ng serve
+'''
 
 **Project 1 :-**
 
