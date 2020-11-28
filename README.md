@@ -117,21 +117,21 @@ Points :- 5 Points
 
 I have created an S3 bucket where the files are getting uploaded. I have used unique keys to store these files, there by increasing performance. I have created another s3 bucket in a different region to have a disaster recovery in place. Apart from this I have done all the necessary configuration which was required for assignment 2. i.eI have used bucket-defined lifecycle strategy. Doing this I can transfer the object to various storage classes such as SIA and Glacier at configured time intervals as the cost can be reduced, I have used SIA to transfer infrequent access data, but it will be instant when required. The archive data that can be used for auditing or other year-end events can be shifted by Glacier. Following the policy I have specified on the buckets as per the current requirement, after 75 days from the date of creation, I will transfer the objects from Standard S3 to SIA and then I will hold it there for a few months until a year is completed from the date of creation of the object. Once a year is completed, I am keeps the data in the glacier for another year that can be used for audit and then we purge the data. (i.e 365 \* 2 = 730 days).
 
-![](RackMultipart20201122-4-1i1iydp_html_8d5f7334edad1af9.png)
+![](https://github.com/ANANTHUPADHYA/ananthproject/blob/master/screenshots/image15.png)
 
-![](RackMultipart20201122-4-1i1iydp_html_9d100ad7926664c5.png)
+![](https://github.com/ANANTHUPADHYA/ananthproject/blob/master/screenshots/image16.png)
 
-![](RackMultipart20201122-4-1i1iydp_html_5bc90a2f78b0b504.png)
+![](https://github.com/ANANTHUPADHYA/ananthproject/blob/master/screenshots/image17.png)
 
 **Cloud Front**
 
 AWS provides a CDN offering called cloud front. Cloud Front can be designed to support the S3 bucket content so that data can be easily served across the globe via the globally deployed edge location. There can be reliability due to various edge locations. The cloud front delivery and its configuration are seen in the following screenshot. Also enabling transfer acceleration helps in faster data transfers from s3 bucket.
 
-![](RackMultipart20201122-4-1i1iydp_html_2b4850deb6563a86.png)
+![](https://github.com/ANANTHUPADHYA/ananthproject/blob/master/screenshots/image18.png)
 
-![](RackMultipart20201122-4-1i1iydp_html_9994fdc9cdc5cf4.png)
+![](https://github.com/ANANTHUPADHYA/ananthproject/blob/master/screenshots/image19.png)
 
-![](RackMultipart20201122-4-1i1iydp_html_b5563bc5c76d3ac3.png)
+![](https://github.com/ANANTHUPADHYA/ananthproject/blob/master/screenshots/image20.png)
 
 j)Criteria :- **Lambda**
 
