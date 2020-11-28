@@ -31,7 +31,7 @@ Points :- 5 points
 
 User registration form has fields first name, last name, email address, isAdmin (Check and Uncheck), Password. The user should register first to successfully use the app.
 
-![](RackMultipart20201122-4-1i1iydp_html_1c93cafa0de10f48.png)
+![alt text](https://github.com/ANANTHUPADHYA/ananthproject/blob/master/screenshots/image1.png)
 
 b)Criteria :- **Custom Login**
 
@@ -39,7 +39,7 @@ Points :- 5 points
 
 Once registration is complete the user can login to the portal by clicking on login button. The user has to insert the his/her email address and then password and the after successful login the user is taken into the file page.
 
-![](RackMultipart20201122-4-1i1iydp_html_b7395fd8a9f424bc.png)
+![alt_text](https://github.com/ANANTHUPADHYA/ananthproject/blob/master/screenshots/image2.png)
 
 c) Criteria :- **File Upload**
 
@@ -49,7 +49,7 @@ Here the user can see the files which he/she has uploaded and can see the detail
 
 The users will see the files which belongs to him/her. If the user is an admin user, then the user will be able to see the admin icon clicking which he will be able to see all the files uploaded by all the users.
 
-![](RackMultipart20201122-4-1i1iydp_html_b59158d22607d188.png)
+![](https://github.com/ANANTHUPADHYA/ananthproject/blob/master/screenshots/image3.png)
 
 Users can upload any type of files with the only restriction that files greater than 10MB cannot be uploaded.
 
@@ -59,7 +59,7 @@ Points :- 5 points
 
 Users can download these files which they uploaded by clicking on the download icon.
 
-![](RackMultipart20201122-4-1i1iydp_html_24fdd2e1240d9093.png)
+![](https://github.com/ANANTHUPADHYA/ananthproject/blob/master/screenshots/image4.png)
 
 e)Criteria :- **Database Updates**
 
@@ -67,7 +67,7 @@ Points :- 5 Points
 
 I am using Amazon DynamoDB for this project. I use Query, Scan and Insert/Update/Delete Item to perform Read, Insert, Update and Delete items/attributes in the Database
 
-![](RackMultipart20201122-4-1i1iydp_html_4b6d4509d12955a.png)
+![](https://github.com/ANANTHUPADHYA/ananthproject/blob/master/screenshots/image5.png)
 
 f)Criteria :- **File Edit**
 
@@ -75,7 +75,7 @@ Points :- 5 Points
 
 Users can edit these files, they can update the file description, file name and the file. Updated values of these fields are shown in the portal.
 
-![](RackMultipart20201122-4-1i1iydp_html_67915fffe4b73c45.png)
+![](https://github.com/ANANTHUPADHYA/ananthproject/blob/master/screenshots/image6.png)
 
 g)Criteria :- **File Delete**
 
@@ -83,7 +83,7 @@ Points :- 5 Points
 
 Users/Admin can delete the files using the delete button.
 
-![](RackMultipart20201122-4-1i1iydp_html_e111bf5f868ecf62.png)
+![](https://github.com/ANANTHUPADHYA/ananthproject/blob/master/screenshots/image7.png)
 
 **AWS Configurations and Usages**
 
@@ -93,11 +93,11 @@ Points :- 5 Points
 
 I purchased a domain in Godaddy as the cost of the domain was cheaper around ($1-$2) when compared to AWS domains which costed around ($10-$12). Once the domain was obtained ([http://fileexplorerpost.xyz](http://fileexplorerpost.xyz/)) using amazon R53 created a hosted zone. After creating a hosted zone added a record with the domain name and EC2 public IP. As the domain name was purchased in GoDaddy, I added amazon nameservers to the GoDaddy account.
 
-![](RackMultipart20201122-4-1i1iydp_html_898d996177fe9a7b.png)
+![](https://github.com/ANANTHUPADHYA/ananthproject/blob/master/screenshots/image8.png)
 
-![](RackMultipart20201122-4-1i1iydp_html_8221036a1e4bbb67.png)
+![](https://github.com/ANANTHUPADHYA/ananthproject/blob/master/screenshots/image9.png)
 
-![](RackMultipart20201122-4-1i1iydp_html_593a7b38fde5e098.png)
+![](https://github.com/ANANTHUPADHYA/ananthproject/blob/master/screenshots/image10.png)
 
 i)Criteria: **ELB (Elastic Load Balancer)**
 
@@ -105,11 +105,11 @@ Points :- 5 Points
 
 I have used Classic Elastic Load Balancer for distributing the traffic across multiple ec2 instances. I defined the load balancer, assigned the security groups, configured the healthz check and registered EC2 instances with load balancer. I have my ec2 instances at different availability zones and have enabled the cross zone load balancing.
 
-![](RackMultipart20201122-4-1i1iydp_html_7012d7d55c9847c7.png)
+![](https://github.com/ANANTHUPADHYA/ananthproject/blob/master/screenshots/image11.png)
 
-![](RackMultipart20201122-4-1i1iydp_html_d61b90ffaeac516.png)
+![](https://github.com/ANANTHUPADHYA/ananthproject/blob/master/screenshots/image12.png)
 
-![](RackMultipart20201122-4-1i1iydp_html_999f573ce5ac47ca.png)
+![](https://github.com/ANANTHUPADHYA/ananthproject/blob/master/screenshots/image13.png)
 
 j)Criteria :- **S3 Bucket and Cloud Front**
 
