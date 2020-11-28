@@ -204,11 +204,9 @@ Frontend is written in Angular, I have created a simple front-end to talk to my 
 
 Github URL :- [https://github.com/ANANTHUPADHYA/cloud](https://github.com/ANANTHUPADHYA/cloud)
 
-![](https://github.com/ANANTHUPADHYA/ananthproject/blob/master/screenshots/image29.png)
-
 CodeCommit
 
-![](https://github.com/ANANTHUPADHYA/ananthproject/blob/master/screenshots/image30.png)
+![](https://github.com/ANANTHUPADHYA/ananthproject/blob/master/screenshots/image29.png)
 
 l)Criteria :- **Admin Panel**
 
@@ -216,11 +214,11 @@ Points :- 10 Points
 
 Admin panel lists all the files and the details from all the users. Admin can view these files from all the users who are using the application and admin also has the capability to delete the files. A small button is displayed at the top of the screen, clicking on which an admin panel will open. The
 
+![](https://github.com/ANANTHUPADHYA/ananthproject/blob/master/screenshots/image30.png)
+
 ![](https://github.com/ANANTHUPADHYA/ananthproject/blob/master/screenshots/image31.png)
 
 ![](https://github.com/ANANTHUPADHYA/ananthproject/blob/master/screenshots/image32.png)
-
-![](https://github.com/ANANTHUPADHYA/ananthproject/blob/master/screenshots/image33.png)
 
 j)Criteria :- **UI, Documentation, Video, AWS Resource Config**
 
@@ -232,6 +230,6 @@ Documentation of the same is written here.
 
 AWS Resource Config
 
-![](https://github.com/ANANTHUPADHYA/ananthproject/blob/master/screenshots/image34.png)
+![](https://github.com/ANANTHUPADHYA/ananthproject/blob/master/screenshots/image33.png)
 
 Thank you
